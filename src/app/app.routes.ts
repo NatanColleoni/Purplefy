@@ -1,4 +1,5 @@
 import { Routes } from "@angular/router";
+import { authenticatedGuard } from "./guards/authenticated.guard";
 
 export const AppRoutes: Routes = [
   {
@@ -9,5 +10,10 @@ export const AppRoutes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then(m => m.LoginModule) //routes lazy loading
+  },
+  {
+    path: 'player',
+    loadChildren: () => import('./pages/player/player.module').then(m => m.PlayerModule),
+    canMatch: [false]
   }
 ]
