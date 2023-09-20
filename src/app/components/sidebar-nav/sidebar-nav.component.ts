@@ -8,6 +8,8 @@ import { faHome, faSearch, faGuitar, faMusic } from '@fortawesome/free-solid-svg
 })
 export class SidebarNavComponent implements OnInit {
 
+  selectedOption = 'Home'
+
   homeIcon = faHome
   searchIcon = faSearch
   artistIcon = faGuitar
@@ -17,5 +19,9 @@ export class SidebarNavComponent implements OnInit {
 
   ngOnInit(): void {
     
+  }
+
+  buttonClick(buttonName: string) {
+    this.selectedOption = buttonName
   }
 }

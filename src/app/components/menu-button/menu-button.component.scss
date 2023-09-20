@@ -15,6 +15,7 @@
     color: $primary;
     cursor: pointer;
     background-color: $button-background;
+    transition: background-color 0.3s ease, color 0.3s ease;
     
     span {
       display: inline-block;
@@ -24,6 +25,15 @@
       margin-left: 15px;
       overflow: hidden;
       text-overflow: ellipsis;
+    }
+
+    &.selected {
+      background-color: $primary;
+      color: $white;
+    }
+
+    &:hover {
+      opacity: .8;  
     }
   }
 }

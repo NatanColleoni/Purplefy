@@ -1,5 +1,7 @@
+@import 'variables';
+
 * {
-  color: white;
+  color: $white;
 }
 
 :host {
