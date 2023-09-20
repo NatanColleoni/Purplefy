@@ -32,12 +32,41 @@ $m-between-options: 10px;
     .menu-container {
       width: 100%;
 
+      &.flex {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
       &.options {
         min-height: $h-menu-options;
         flex-direction: column;
 
         * {
           margin-bottom: $m-between-options;
+        }
+      }
+
+      .playlist-title {
+        margin: 10px 0;
+        align-self: flex-start;
+        font-weight: bold;
+        font-size: .7rem;
+        opacity: .6;
+        color: $text-grey;
+      }
+
+      .playlist-list {
+        width: 100%;
+        max-height: 50vh;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        * {
+          margin-bottom: $m-between-options
         }
       }
     }
