@@ -1,8 +1,10 @@
 @import 'variables';
 
 $h-spotify-logo: 120px;
-$h-menu-options: 150px;
+$h-user-data: 70px;
 $m-between-options: 10px;
+
+$h-spacing: calc($h-spotify-logo + 150px + $h-user-data);
 
 :host {
   max-width: 300px;
@@ -25,7 +27,7 @@ $m-between-options: 10px;
       min-height: $h-spotify-logo;
 
       img {
-        width: 90%;
+        width: 70%;
       }
     }
 
@@ -39,8 +41,7 @@ $m-between-options: 10px;
       }
 
       &.options {
-        min-height: $h-menu-options;
-        flex-direction: column;
+        min-height: auto;
 
         * {
           margin-bottom: $m-between-options;
@@ -58,8 +59,8 @@ $m-between-options: 10px;
 
       .playlist-list {
         width: 100%;
-        max-height: 50vh;
-        overflow-y: scroll;
+        max-height: calc(88vh - $h-spacing);
+        overflow-y: auto;
 
         &::-webkit-scrollbar {
           display: none;
@@ -70,5 +71,21 @@ $m-between-options: 10px;
         }
       }
     }
+  }
+
+  .divider {
+    content: "";
+    width: 100%;
+    background-color: $button-background;
+    height: 2px;
+    margin: 10px 0 20px 0;
+  }
+
+  .user-data {
+    flex-grow: 0;
+    display: block;
+    bottom: 0;
+    align-self: flex-end;
+    width: 100%;
   }
 }

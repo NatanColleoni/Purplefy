@@ -1,7 +1,7 @@
 import { IPlaylist } from "../Interfaces/IPlaylist";
-import { IUSer } from "../Interfaces/IUser";
+import { IUser } from "../Interfaces/IUser";
 
-export function SpotifyUserMap(user: SpotifyApi.CurrentUsersProfileResponse): IUSer {
+export function SpotifyUserMap(user: SpotifyApi.CurrentUsersProfileResponse): IUser {
   return {
     id: user.id,
     name: user.display_name,
