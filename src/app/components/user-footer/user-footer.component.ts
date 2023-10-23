@@ -20,4 +20,8 @@ export class UserFooterComponent implements OnInit{
   ngOnInit(): void {
     this.user = this.spotifyService.user
   }
+
+  logout() {
+    this.spotifyService.logout()
+  }
 }
